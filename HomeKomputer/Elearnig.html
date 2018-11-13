@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>E-Learnig | Home Komputer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
+    <meta name="author" content="Wandi Pratama">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+</style>
+
+
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.3.theme.css">-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/custom-theme/jquery.ui.1.10.3.ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
+    <!--begin wijmo menu-->
+    <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
+    <!--End wijmo menu-->
+    <!--begin file input-->
+    <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
+    <!--End file input-->
+
+    <!-- jqGrid-->
+    <link rel="stylesheet" href="third-party/jqGrid/jqGrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="third-party/jqGrid/jqGrid.overrides.css">
+    <!-- end jqGrid -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/vendor/html5shiv.js" type="text/javascript"></script>
+      <script src="assets/js/vendor/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+
+<!-- Navbar
+    ================================================== -->
+<header class="navbar navbar-inverse navbar-fixed-top">
+         <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" >Home Komputer</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li><a href="./kursus_komputer.html">Kursus Komputer</a></li>
+        <li><a href="./Elearnig.html">E-Learning</a></li>
+        <li><a href="portofolio.html">Protfolio</a></li>
+        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            Tips&Trik <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./artikel_komputer.html">Komputer</a></li>
+                            <li><a href="./artikel_Mikrotik.html">Mikrotik</a></li>
+                            </ul>
+                    </li>
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.facebook.com/wandi.wandipratama.5"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+        
+      </ul>            
+      <form class="navbar-form navbar-right">
+         <div class="form-group">
+             <input type="text" class="form-control" placeholder="Search">
+         </div>
+         <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+    </div>  
+   </div>  
+  </nav>
+    </header>
+
+
+<!-- Subhead
+    ================================================== -->
+<header class="bs-header" id="overview">
+    <div class="container">
+        <h1>E-Learnig Home Komputer</h1>
+            <p class="lead">Amanah Bagi Yang Awam Memuaskan Bagi Yang Paham.</p>
+    </div>
+</header>
+
+<h2>Materi Dapat lihat di Bawah ini</h2>
+
+
+<div id="btnContainer">
+<button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+<button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:;">
+    <h2>Cara Merakit Komputer Yang Baik dan Benar</h2>
+    <p>
+Langkah-Langkah Merakit Komputer
+
+1. Memasang Processor ke Motherboard
+
+Alangkah baiknya sebelum motherboard dipasang ke casing, terlebih dahulu memasang processor karena akan lebih mudah cara memasangnya. Cara memasang processor ke motherboard yaitu :
+Kita tentukan dulu posisi pin 1 pada prosessor dan socket prosessor di motherboard, umumnya terletak di pojok yang ditandai dengan tanda titik atau lekukan.
+Angkat tuas pengunci socket ke atas supaya terbuka
+Sesuaikan posisi kaki processor dengan lubang socket, kalau sudah lalu tekan processor ke dalam socket sampai rapat.
+Kunci kembali dengan tuas pengunci.
+Cara Merakit Komputer 
+
+2. Memasang Motherboard
+
+Untuk memasang Motherboard pada casing yaitu letakkan motherboard pada tray casing dan sesuaikan lubang antara casing dan lubang motherboard, lalu kunci dengan sekrup.
+Cara Merakit Komputer 
+
+3. Memasang Heatsink
+
+Setelah processor terpasang, lalu pasang heatsink supaya processor tidak panas. Heatsink ini diletakkan diatas processor dan diberi penahan supaya tidak lepas. Sebelumnya lapisi heatsink dengan Gel penghantar panas. Apabila heatsink anda ada kipasnya/fan maka konektor power pada kipas/fan hubungkan ke motherboard.
+Cara Merakit Komputer 
+
+4. Memasang RAM / Memori
+Cara memasang Ram / modul memori yaitu : Buka dulu tuas penguncinya, lalu sesuaikan posisi lekukan pada modul memori dengan lekukan pada slot. Kalau sudah pas lalu tekan dan pasang kembali tuas pengunci RAM / memori.
+
+Cara Merakit Komputer 
+
+5. Memasang Power Supply
+Biasanya kalau kita membeli casing pasti power supply sudah terpasang. Nah apabila power supply belum terpasang caranya memaangnya yaitu :
+
+Letakkan power supply pada tempatnya yang ada dibelakang casing, lalu kunci dengan sekrup.
+Pasang konektor power dari power supply ke motherboard berikut kabel-kabelnya.
+Cara Merakit Komputer 
+
+6. Memasang Kabel Motherboard dan Casing
+
+Pasang kabel konektor IDE primary dan secondary pada motherboard.
+Untuk motherboard non ATX, pasang kabel port serial dan pararel pada konektor di motherboard.
+Pada bagian belakang casing terdapat lubang untuk memasang port tambahan jenis non slot. Buka sekerup pengunci pelat tertutup lubang port lalumasukkan port konektor yang ingin dipasang dan pasang sekerup kembali.
+Hubungkan kabel konektor mouse dan keyboard pada motherboard.
+Hubungan kabel konektor yang lainnya seperti LED, speaker internal dan port yang tersedia di casing komputer.
+Cara Merakit Komputer 
+
+7. Memasang Drive
+Untuk memasang drive seperti harddisk, CD-ROM/DVD-ROM caranya yaitu :
+
+Masukkan drive dari depan casing. Atur dulu settingan jumper (sebagai master atau slave) pada drive, lalu pasang sekrup supaya drive tidak lepas.
+Hubungkan konektor kabel IDE ke drive dan konektor di motherboard (konektor primer yang dipakai lebih dulu)
+Apabila kabel IDE terhubung pada 2 (dua) drive, setting jumpernya yaitu drive pertama disetting sebagai master dan satunya lagi sebagai slave.
+Dan konektor IDE sekunder pada motherboard dapat dipakai untuk menghubungkan dua drive tambahan.
+Sambungkan kabel power dari catu daya pada masing-masing drive.
+
+Cara Merakit Komputer 
+
+8. Memasang Card Adapter
+
+Untuk Card Adapter yang bisanya dipasang adalah sound, video card, modem dan SCSI adapter. Cara pemasangannya yaitu : masukkan Card Adapter pada slot yang tersedia di motherboard, lalu tekan sampai konektor benar-benar masuk, kemudian beri sekrup sebagai penahan card.
+Cara Merakit Komputer 
+
+9. Tahap terakhir perakitan komputer
+
+Kalau semua langkah-langkah perakitan komputer sudah selesai, kini tutup dengan casing dan beri sekrup. Hubungkan kabel dari catu daya ke soket dinding dan juga hubungkan konektor monitor ke port video card, konektor kabel keyboard dan konektor mouse ke port mouse.
+10. Pemeriksaan Hasil Perakitan Komputer
+
+Setelah komputer selesai dirakit, kita lakukan pemeriksaan dan pengetesan hasilnya dengan program BIOS, caranya yaitu :
+Nyalakan komputer dan monitor, lihat layar monitor dan juga dengarkan suara dari speaker.
+Nah program Fost dari Bios ini akan otomatis mendeteksi hardware apa saja yang sudah dipasang pada komputer.
+Lakukan setting untuk nilai dari kapasitas hardisk dan boot sequence.
+Kalau sudah lalu simpan hasil settingan dan exit dari setup BIOS, maka komputer meload system operasi dengan urutan pencarian yang disesuaikan dengan settingan boot sequence pada Bios.
+Masukkan CD Bootable yang berisi sistem operasi pada drive pencarian.
+11. Solusi bila terjadi masalah pada hasil perakitan komputer
+
+Hidupkan komputer, apabila komputer dan monitor tidak hidup, periksa kabel daya pada colokan listrik sudah terhubung apa belum.
+Apabila waktu dinyalakan, tampilan layar monitor ngeblank / berwarna hitam, pasti ada kesalahan dan apabila pada CPU terdengar bunyi beep, maka betulkan penempatan RAM / memori pada soket.
+Apabila card adapter tidak terdeteksi, periksa penempatan card adapter sudah pas apa belum ke slotnya.
+Apabila LED dari harddisk atau CD menyala terus, periksa konektornya sudah terhubung apa belum.</p>
+  </div>
+  <div class="column" style="background-color:;">
+    <h2>Cara Install Windows 7</h2>
+    <p> Instalasi Windows mungkin terdengar seperti tugas yang menakutkan tapi sebenarnya sangat mudah, terutama jika kita menginstal sistem operasi yang lebih baru seperti Windows 7 Ultimate 32-bit dan 64-bit. Tetapi tidak perlu membawa komputer atau Laptop kepada ahli lokal untuk menginstal ulang yang sederhana. Kita dapat menginstal Windows sendirian!
+
+Windows 7 adalah sistem operasi Windows yang mungkin paling mudah dipasang. Kita hanya ditanya beberapa pertanyaan penting selama penginstalan, sebagian besar proses penyiapannya benar-benar otomatis. Seperti versi Windows lainnya, metode “clean install” atau “advanced” adalah cara paling cerdas untuk untuk menginstal ulang Windows 7 dibandingkan dengan pemasangan “upgrade” atau pemasangan paralel yang kurang umum.
+
+Cara Instal Windows 7 dengan USB Flashdisk
+Bagaimana Cara Install Windows 7?
+Untuk memulai proses instalasi windows 7 pada kompter atau laptop, kita harus mengatur boot awal pada Menu BIOS agar PC pertama kali membaca DVD Windows 7 atau Flashdisk.
+
+Panduan Cara Install Windows 7
+
+
+Untuk menginstall windows 7, ikutilah langkah-langkah dibawah ini:
+
+Nyalakan PC (Komputer atau Laptop), kemudian masuklah ke Menu BIOS.nyalakan laptop
+Tips: Supaya bisa masuk ke MENU BIOS, SAAT menyalakan Laptop atau Komputer seperti gambar diatas, tekan terus-menerus dengan cepat tombol F2, pada beberapa laptop merk lain tekan Esc, F1, F10 atau Del Pada Komputer.
+
+Catatan: Pada sebagian merk laptop mungkin juga sambil menekan tombol “fn” bersamaan dengan F1/F2 dst, agar tombol tersebut berfungsi.
+
+Masuk ke Menu BIOS. Pada MENU BIOS aturlah booting pertama.menu bios
+Catatan: Gambar diatas merupakan contoh masuk ke menu “BIOS” atau “Setup Utility”, tampilan ini beraneka ragam tergantung merk.
+
+Aturlah Booting Awal. Cari Menu Tab Boot untuk mengatur Booting Pertama.bios setup
+Tips: Arahkan Boot Pertama Jadi CD-DVD atau Flashdisk sesuai keinginan, Tampilan ini pun beraneka ragam tergantung merk. Ubah “Boot” pertama pada Menu “BIOS” Ke CD/DVD atau Flashdisk, namun jika dari Flashdisk ubah boot pertama ke Flashdisk, ini diperlukan agar “Booting” pertama kali membaca media CD/DVD Windows 7 atau Flashdisk.
+
+
+Catatan: Khusus untuk booting pertama dari flashdisk, maka harus masukan terlebih dahulu flashdisk sebelum menyalakan komputer atau laptop.
+
+Simpan Pengaturan BIOS. Klik Exit dan kemudian Exit Saving Changes dengan mengklik Yes.save setup configuration
+Tips: Komputer atau Laptop akan segera “Restart” dari DVD. Jangan Lupa masukan terlebih dahulu DVD Windows 7 “Installer” ke Drive DVD, sebelum “restart”.
+
+Mulai Booting Pertama. PC akan mulai booting dari DVD Windows 7 Installer.press any-key
+Tips: Klik Apa saja pada keyboard, misalnya klik “Enter” dan waktunya hanya 5 detik, kalo 5 detik ga di klik, proses tidak akan terjadi, harus “restart” lagi.
+
+Tunggu proses. Pada Langkah ini tidak melakukan apapun.loading installation
+Pilih Bahasa. Pilihlah Bahasa English, kemudian Klik Next.setelan bahasa
+Mulai Proses Instal. Klik Install Now untuk memulai instalasi.install now
+Konfirmasi Persetujuan. Klik I accept the license terms, kemudian Klik Next.persetujuan
+Tips: Klik untuk Persetujuan instalasi.
+
+Pilih opsi lanjutan. Pilihlah opsi lanjutan atau advanced untuk instalasi file sistem windows 7.advanced install
+Tips: Pada Langkah ini, sangat penting, Klik “Custom advanced”. Langkah ini artinya akan menginstal Windows 7 dari awal, sehingga nanti akan seperti baru, dan menghapus semua sistem yang lama.
+
+Atur partisi. Aturlah partisi sesuai yang dikehendaki.setup disk partition
+Tips: Pada langkah ini Penting Untuk Mengatur Partisi yang akan di-install Windows 7 yang Baru. Gambar diatas merupakan contoh Laptop yang memiliki 3 Partisi, Pertama System Reserved, Kedua Windows 7 lama alias (C:), dan Ketiga Data alias (D:).
+
+Catatan: Jika pada gambar diatas pada kotak tersebut kosong, artinya hard disk tidak terbaca, maka hardisk kemungkinan rusak atau kurang bagus atau kabel ke hard disk tidak bagus atau tidak terdeteksi.
+
+Hapus Partisi Sistem Lama. Delete Partisi Sistem Windows sebelumnya yang lama.delete old-partition
+Catatan: Dengan Delete Partisi, maka sistem Lama (C:) akan terhapus, dan My Documents pun akan terhapus seluruhnya, karena My Documents termasuk (C:). Jadi kalo simpan Data-data dikemudian hari sebaiknya di (D:) atau (E:). Arahkan kursor untuk menghapus Partisi dengan Klik “Delete”, kemudian klik OK – OK aja, sampai tampilan pada gambar berikutnya.
+
+Buat Partisi baru. Buatlah partisi yang baru dengan kapasitas atau space hard disk cukup.buat partisi baru
+Tips: Arahkan Kursor pada partisi yang akan diisi Windows 7 yang baru, Klik New. Kemudian Klik OK dan OK. Untuk diketahui, disini ada suatu nilai berapa “Byte Hard Disk”.
+
+Instal windows 7 pada partisi baru. Teruskan instalasi pada Partisi Baru.instal pada partisi baru
+Tips: Tampilan akan seperti gambar diatas, kemudian arahkan Kursor Pada Partisi yang akan di-install Windows 7 yang baru “Primary”, Kemudian Klik “Next”.
+
+Tunggu proses transfer file windows 7. Memulai Proses Instalasi.installing windows
+Tips: Proses Instalasi Benar-benar dimulai, kalo sudah sampai langkah ini anda bisa benar-benar bersantai, karena selanjutnya akan berjalan Otomatis. Jangan klik apapun, biarkan saja sampai restart dengan sendirinya. Jika Pada saat Expanding Windows files ada “error”, berarti memory laptop/komputer rusak, coba diulang lagi dari awal kalo “error”. Kalo lancar, Windows akan restart otomatis.
+
+Tunggu proses lanjutan. Proses instalasi dilanjutkan otomatis, kemudian akan restart sendiri.auto-restart
+Catatan: Jika menggunakan DVD tidak melakukan apapun, tapi jika menggunakan Flashdisk setelah gambar tersebut “restart” Flashdisk HARUS dicabut.
+
+Restart otomatis.press any-key
+Catatan: Setelah “Restart”, pada langkah ini jangan klik apapun, kalo diklik nanti mulai lagi seperti langkah di atas. Jika memakai flashdisk tidak ada gambar diatas, kan dah dicabut.
+
+Biarkan Proses Melanjutkan. Biarkan saja jangan klik apapun pada langkah ini.updating registry settings
+Penyempurnaan instalasi lanjutan. Biarkan saja.completing installation
+Tips: Menyempurnakan Proses Instalasi Windows. Biarkan saja, jangan klik apapun, kalo gerakin “mouse” atau minum kopi Boleh.
+
+Jangan klik apapun. Proses Instalasi Windows hampir selesai, dan akan restart otomatis.continue after-restart
+Isi Data-data. Isiliah dengan membuat nama pengguna.user name
+Tips: Isi Nama untuk Laptop, Komputer, bebas, Trus Klik “Next”.
+
+Isi kata sandi jika diinginkan. Isi Password untuk masuk ke windows 7.set password
+Tips:Tidak perlu diisi, kecuali Laptop atau komputernya mau pakai “password” atau kata kunci, kemudian klik “Next”.
+
+Isi Kode Kunci Produk jika sudah punya. Product key windows 7, klik Skip jika belum punya.product key
+Tips: Jika sudah memiliki Kode Windows 7, ketik kodenya dalam kotak tersedia, dan klik “Automatically activate Windows”. Jika belum mempunyai kode, jangan diisi apapun, Disebelah “Next” nanti ada “Skip”, jadi Klik “Skip”.
+
+Pilih pengaturan rekomendasi. Klik Use recommended settings.recommended setting
+Atur waktu. Pengaturan waktu aktual, sesuaikan waktu yang dikehendaki, kemudian klik Next.pengaturan waktu
+Selesai. Proses instalasi windows 7 selesai.desktop
+Tips: Bagi yang belum memasukan kode windowsnya “Product key” alias belum di aktifkan/activated, maka sempurnanya windows 7 tersebut hanya berlaku 3 atau 30 hari tergantung edisinya, jika belum di aktifkan, tampilan windows akan berubah hitam, dan jika dibiarkan kadang bisa merusak hardware Laptop atau Netbook, sebaiknya segera aktifkan Windows setelah Instalasi selesai. Untuk mengaktifkan (aktivasi) windows 7 sebenarnya ada pada DVD itu sendiri, jika bingung tanyakan pada penjual atau bertanya kepada yang lebih mengetahui, karena cara aktivasi windows 7 berbeda-beda.
+
+Setiap selesai instalasi windows 7 sebaiknya instal juga driver-windows seperti Graphics, Audio, Network, dan semua yang berhubungan dengan driver sesuai merknya, biasanya ada CD/DVD tersendiri dikasih waktu membeli Laptop atau Komputer, kalo tidak ada harus download. Namun Pada beberapa Merk Laptop, biasanya tidak perlu juga karena sudah terintegrasi dengan Windows 7, dan Driver harus di instal supaya Laptop atau Komputer berjalan dengan semaksimal mungkin, kemudian lengkapilah dengan software pendukungnya.</p>
+  </div>
+</div>
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+================================================== -->
+
+<footer class="bs-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-3">
+                <h3><span class="icon-envelope"></span> Contact</h3>
+                <ul class="icons">
+                  <li><i class="icon-link"></i> Facebook: <a class="targetblank" href="https://www.facebook.com/wandi.wandipratama.5">Wandi Pratama</a></li>
+                  <li><i class="icon-twitter"></i> WhatApps: 083803897245</a></li>
+                  <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/OneBlog">Wandi Pratama</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <h3><span class="icon-group"></span> Team</h3>
+                <ul class="list-unstyled">
+                    <li>Lead Product Developer : <a class="targetblank" href="https://www.facebook.com/wandi.wandipratama.5">Wandi Pratama</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col-lg-5 col-sm-5">
+                <h3><span class="icon-lightbulb"></span> Lokasi</h3>
+                <ul class="list-unstyled">
+                    <li>JL. Kopral Kusnadi No.71 Kelurahan Sukajadi</li>
+                    <li>Kecamatan Prabumulih Timur, Kota Prabumulih, Sumatera Selatan 31<li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="assets/js/vendor/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/vendor/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/vendor/holder.js" type="text/javascript"></script>
+<script src="assets/js/vendor/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="assets/js/google-code-prettify/prettify.js" type="text/javascript"></script>
+<script src="assets/js/docs.js" type="text/javascript"></script>
+<!-- FileInput -->
+<script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
+<script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
+<!-- End FileInput -->
+<!--wijmo-->
+<script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
+<!--End wijmo-->
+<!--jqGrid-->
+<script src="third-party/jqGrid/jqGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="third-party/jqGrid/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<!--end jqGrid-->
+<script src="assets/js/demo-extra.js" type="text/javascript"></script>
+</body>
+</html>
